@@ -1,0 +1,150 @@
+.searchbar {
+    display: flex;
+    align-items: center;
+    max-width: 1400px; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the search bar horizontally */
+    border: 1px solid #ccc;
+    margin-top: 50px;
+    border-radius: 5px;
+    padding: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+}
+.search-input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 40px;
+  padding: 0 20px;
+  font-size: 16px;
+  outline: none;
+  color: #333;
+  background: transparent;
+  font-family: cursive;
+}
+.search-button {
+  background-color: #026670;; /* Customize the button background color */
+  color: #fff; /* Customize the button text color */
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  margin-left: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Add a smooth hover effect */
+  font-family: cursive;
+}
+.search-button:hover {
+  background-color: #026670;; /* Customize the button background color on hover */
+}
+.search-bar .search-button {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+}
+
+:root {
+  --indent: 0;
+}
+
+@media screen and (min-width: 40rem) {
+  :root {
+    --indent: clamp(1.5rem, 4vw, 2.5rem);
+  }
+}
+
+body {
+  margin: 0;
+  display: flex;
+  width: 100%;
+  height: 70%;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.card {
+  margin: 2rem;
+  display: grid;
+  grid-template-columns:
+    var(--indent) calc(3 * var(--indent)) 1fr 1fr calc(2 * var(--indent))
+    var(--indent);
+  grid-template-rows:
+    var(--indent) calc(3 * var(--indent)) 1fr calc(2 * var(--indent))
+    var(--indent);
+  max-width: 100rem;
+}
+
+.card::before {
+  content: "";
+  display: block;
+  background: white;
+  background-size: cover;
+  grid-column: 2/-1;
+  grid-row: 2/-1;
+  box-shadow: 0 0 2rem hsla(177, 90%, 44%, 0.384);
+}
+
+.card::after {
+  content: "";
+  display: block;
+  background: #dee4e4d3;
+  grid-column: 1/-2;
+  grid-row: 1/-2;
+  z-index: -1;
+}
+
+.card img {
+  grid-column: 4/5;
+  grid-row: 3/4;
+  box-shadow: 0 0 1rem hsla(169, 90%, 44%, 0.384);
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+}
+
+.card figcaption {
+  grid-column: 2/6;
+  grid-row: 2/5;
+  display: grid;
+  grid-template-columns: 3fr 1fr 2fr;
+}
+
+.card blockquote {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  margin: 0;
+  padding-bottom: 1rem;
+  font-size: 5rem;
+  font-weight:300;
+  align-self: flex-end;
+  font-family: cursive;
+}
+
+.card cite {
+  grid-column: 1/2;
+  font-size: 1.3rem;
+  font-weight: 100;
+  font-style: normal;
+  font-family: cursive;
+  margin-right: 2px;
+  margin-left: 5px;
+}
+
+.card .credit {
+  grid-column: 2/4;
+  place-self: flex-end;
+  margin: 0;
+  padding: 1rem;
+  text-align: end;
+  color: white;
+  font-weight: 400;
+}
+
+.card a {
+  color: white;
+}
