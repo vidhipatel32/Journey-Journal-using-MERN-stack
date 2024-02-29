@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
-// dbURI ="mongodb+srv://travel:travel2010@cluster1.dh0gibx.mongodb.net/travel?retryWrites=true&w=majority"
-dbURI = "mongodb+srv://travel:travel2010@cluster1.dh0gibx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster1"
+dbURI = " "    
+// mongodb atlas cluster key
 async function connectToDatabase() {
     try {
         await mongoose.connect(dbURI, {
